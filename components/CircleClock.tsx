@@ -3,20 +3,20 @@ import { View, Text, Dimensions, Animated } from "react-native";
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 
 const CircleClock = props =>{
+
     return(
         <CountdownCircleTimer
             isPlaying
-            duration={10}
+            duration={props.dur}
             colors={[
-                ['#004777', 0.4],
-                ['#F7B801', 0.4],
-                ['#A30000', 0.2],
+                ['blue', 1],
+               
             ]}
             strokeWidth={40}
             strokeLinecap={"round"}
         >
             {({ remainingTime, animatedColor }) => (
-                <Animated.Text style={{ color: animatedColor }}>
+                <Animated.Text style={{ color: 'blue' }}>
                     {remainingTime}
                 </Animated.Text>
             )}

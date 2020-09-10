@@ -4,6 +4,7 @@ import { Header } from 'react-native-elements'
 
 const FixedHeader = props => (
         <Header
+            backgroundColor={"black"}
             leftComponent={{
                 icon:'menu',
                 color:'#fff'
@@ -13,7 +14,7 @@ const FixedHeader = props => (
                 style:{color:'#fff'}
             }}
             rightComponent={{
-                icon: 'home',
+                icon: 'add',
                 color: '#fff'
             }}
         />

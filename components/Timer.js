@@ -1,10 +1,12 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Card, ButtonGroup } from 'react-native-elements';
 
 import CircleClock from './CircleClock.tsx'
 
 const Timer = props => {
+    
     const buttons=['Elapsed', 'To Go']
     return (
         // <View style={styles.card}>
@@ -22,7 +24,7 @@ const Timer = props => {
                 buttons={buttons}
             />
             <Text>Length</Text>
-            <CircleClock />
+            <CircleClock dur={props.dur}/>
         </Card>
     )
 }

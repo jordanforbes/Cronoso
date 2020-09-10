@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 // import {Header} from 'react-native-elements'
 import { Card } from 'react-native-elements'
@@ -8,6 +8,16 @@ import FixedHeader from './components/FixedHeader'
 import Timer from './components/Timer'
 
 export default function App() {
+    const [duration, setDuration]=useState()
+    const [clock, setClock]=useState({})
+
+    const makeClock =()=>{
+      setClock({color:"blue"})
+    }
+
+    useEffect(()=>{
+      
+    })
     return ( 
         <View style = {{backgroundColor: 'black', flex: 1,}} >
             <StatusBar 
@@ -19,12 +29,10 @@ export default function App() {
             />
             
             <Timer
-             name="Oven" 
-             h={"1"} 
-             m={"30"} 
-             s={"00"} 
-             length={"1:30:00"} 
-             color="red"
+              key= {0}
+              name="Oven" 
+              dur={5} 
+              color="red"
             />
         </View>
     );
